@@ -1,0 +1,178 @@
+/*
+    base.css - Basic Stylesheet for AV Tutorial Website
+
+    This file contains fundamental CSS rules that set up the
+    basic look and feel for the entire website. This includes:
+    - A simple CSS reset to normalize browser default styles.
+    - Basic typography definitions (font sizes, line heights, etc.).
+    - Common utility classes for quick styling adjustments.
+*/
+
+/* ==========================================================================
+   1. CSS Reset & Box-Sizing
+   ========================================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default margin and padding from common elements */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set default font family, size, and line height for the document */
+html {
+    font-size: 16px; /* Base font size, 1em will be 16px */
+    line-height: 1.5;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+/* Remove list styles from ul/ol elements where not explicitly desired */
+ul, ol {
+    list-style: none;
+}
+
+/* Remove underlines from links by default */
+a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent by default */
+}
+
+/* Ensure images are responsive and don't overflow their containers */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Improve text rendering on all devices */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Form elements basic reset */
+button, input, optgroup, select, textarea {
+    font-family: inherit; /* Inherit font from body */
+    font-size: 100%; /* Reset font size for consistency */
+    line-height: 1.15; /* Correct line height in all browsers */
+    margin: 0; /* Remove default margins */
+}
+
+/* ==========================================================================
+   2. Basic Typography
+   ========================================================================== */
+body {
+    font-family: 'Roboto', sans-serif; /* Default body font */
+    color: #333; /* Default text color */
+}
+
+/* Global link styling on hover */
+a:hover {
+    text-decoration: none; /* Remove underline on hover as well, unless specified otherwise in style.css */
+}
+
+
+/* ==========================================================================
+   3. Common Utility Classes
+   ========================================================================== */
+
+/* Text alignment */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Margin utilities */
+.mt-10 { margin-top: 10px !important; }
+.mt-15 { margin-top: 15px !important; }
+.mt-20 { margin-top: 20px !important; }
+.mt-30 { margin-top: 30px !important; }
+.mt-40 { margin-top: 40px !important; }
+.mt-50 { margin-top: 50px !important; }
+.mt-60 { margin-top: 60px !important; }
+.mt-80 { margin-top: 80px !important; }
+
+.mb-10 { margin-bottom: 10px !important; }
+.mb-15 { margin-bottom: 15px !important; }
+.mb-20 { margin-bottom: 20px !important; }
+.mb-30 { margin-bottom: 30px !important; }
+.mb-40 { margin-bottom: 40px !important; }
+.mb-50 { margin-bottom: 50px !important; }
+
+.mx-auto { /* Center block elements */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Padding Utilities */
+.py-10 { padding-top: 10px !important; padding-bottom: 10px !important; }
+.py-20 { padding-top: 20px !important; padding-bottom: 20px !important; }
+.py-30 { padding-top: 30px !important; padding-bottom: 30px !important; }
+
+.px-10 { padding-left: 10px !important; padding-right: 10px !important; }
+.px-20 { padding-left: 20px !important; padding-right: 20px !important; }
+.px-30 { padding-left: 30px !important; padding-right: 30px !important; }
+
+
+/* Background Colors (used across sections) */
+.bg-light {
+    background-color: #f0f2f5; /* Light gray background */
+}
+
+.bg-dark {
+    background-color: #2c3e50; /* Dark blue background */
+    color: #fff; /* White text on dark background */
+}
+
+/* Rounded Corners (for various elements) */
+.rounded-corners {
+    border-radius: 10px;
+    overflow: hidden; /* Ensures content respects border-radius */
+}
+
+/* Max width utility for content containment */
+.max-w-800 {
+    max-width: 800px;
+}
+
+.max-w-1000 {
+    max-width: 1000px;
+}
+
+/* Flex utilities (basic) */
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}

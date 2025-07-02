@@ -1,0 +1,620 @@
+/*
+    responsive.css - Responsive Stylesheet for AV Tutorial Website
+
+    This file contains media queries to ensure the website is fully
+    responsive and provides an optimal viewing experience across
+    a wide range of devices (mobile, tablet, desktop).
+
+    Breakpoints used:
+    - Max 768px (for tablets and smaller desktops)
+    - Max 480px (for mobile devices)
+*/
+
+/* ==========================================================================
+   1. Global Responsive Adjustments
+   ========================================================================== */
+body {
+    /* Ensure no horizontal scroll */
+    overflow-x: hidden;
+}
+
+/* Adjust general padding on smaller screens */
+.container {
+    padding: 0 15px; /* Slightly less padding on very small screens */
+}
+
+.section-padding {
+    padding: 60px 0; /* Reduce vertical padding on smaller screens */
+}
+
+.section-padding-small {
+    padding: 30px 0; /* Reduce vertical padding for sub-sections */
+}
+
+
+/* ==========================================================================
+   2. Media Query for Tablets and Smaller Desktops (Max-width: 992px)
+      - Adjustments for screens like iPads in portrait, small laptops
+   ========================================================================== */
+@media (max-width: 992px) {
+    /* Header & Navigation */
+    .main-nav ul li {
+        margin-left: 20px; /* Reduce spacing between nav items */
+    }
+
+    .main-nav ul li a {
+        padding: 8px 0; /* Adjust padding */
+    }
+
+    /* Hero Section */
+    .hero-content h2 {
+        font-size: 2.8em; /* Smaller hero heading */
+    }
+
+    .hero-content p {
+        font-size: 1.1em; /* Smaller hero paragraph */
+    }
+
+    .hero-buttons .btn {
+        padding: 12px 25px; /* Adjust button padding */
+        font-size: 0.95em;
+    }
+
+    /* Page Header */
+    .page-header h2 {
+        font-size: 2.2em;
+    }
+
+    .page-header p {
+        font-size: 1.05em;
+    }
+
+    /* Grid Layouts - adjust for tablet view */
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* More flexible min-width */
+        gap: 20px; /* Reduce gap */
+    }
+
+    /* Featured Teachers on Homepage - stack on small tablets */
+    .teacher-grid {
+        grid-template-columns: 1fr; /* Stack on top of each other */
+    }
+    .teacher-card {
+        max-width: 400px; /* Limit width of stacked cards */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* YouTube Videos - adjust min-width */
+    .youtube-videos {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    /* Testimonials Carousel - adjust flex basis */
+    .testimonial-item {
+        flex: 0 0 80%; /* Wider on tablet */
+        max-width: 500px;
+    }
+
+    /* Testimonials List Page (testimonials.html) */
+    .testimonials-list .testimonial-item-long {
+        flex-direction: column; /* Stack image and text */
+        text-align: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .testimonials-list .testimonial-item-long:nth-child(even) {
+        flex-direction: column; /* Ensure it also stacks */
+        text-align: center;
+    }
+    .student-info-long {
+        width: auto; /* Allow content to dictate width */
+    }
+    .testimonial-quote p::before,
+    .testimonial-quote p::after {
+        font-size: 4em; /* Adjust quote size */
+        left: 0;
+        right: 0;
+        transform: none;
+    }
+
+    /* Teachers Profile Page (teachers.html) */
+    .teacher-profile-card {
+        flex-direction: column; /* Stack image and details */
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    .teacher-profile-card:nth-child(even) {
+        flex-direction: column; /* Ensure alternation also stacks */
+        text-align: center;
+    }
+    .teacher-details h3,
+    .teacher-details p {
+        text-align: center !important; /* Override specific alignment for stacked cards */
+    }
+    .teacher-details h3::after {
+        left: 50%;
+        transform: translateX(-50%); /* Center the accent line */
+    }
+
+    /* Blog Post Content (single post) */
+    .blog-container {
+        padding: 0 15px; /* Adjust padding for narrower screens */
+    }
+    .post-author-box {
+        flex-direction: column; /* Stack author image and details */
+        text-align: center;
+    }
+    .post-author-box img {
+        margin-bottom: 15px;
+    }
+    .author-details h5 {
+        text-align: center;
+    }
+
+    /* Contact Page */
+    .contact-content {
+        grid-template-columns: 1fr; /* Stack contact info and form */
+        gap: 30px;
+    }
+    .contact-info {
+        padding: 30px;
+    }
+    .enquiry-form-container {
+        padding: 30px;
+    }
+    .map-container {
+        height: 350px; /* Reduce map height */
+    }
+
+    /* 404 Page */
+    .error-code {
+        font-size: 6em;
+    }
+    .error-message {
+        font-size: 2.2em;
+    }
+    .not-found-section p.lead {
+        font-size: 1.1em;
+    }
+    .not-found-section .cta-buttons {
+        flex-direction: column; /* Stack buttons */
+        gap: 15px;
+    }
+}
+
+
+/* ==========================================================================
+   3. Media Query for Mobile Devices (Max-width: 767px)
+      - Adjustments for smartphones in portrait mode
+   ========================================================================== */
+@media (max-width: 767px) {
+    /* Header & Navigation */
+    .main-header {
+        padding: 10px 0; /* Reduce header padding */
+    }
+
+    .header-content {
+        flex-direction: row; /* Keep logo and toggle on one row */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 40px; /* Smaller logo */
+    }
+
+    .logo h1 {
+        font-size: 1.5em; /* Smaller logo text */
+    }
+
+    .main-nav {
+        /* Hide main nav by default on mobile */
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 65px; /* Below the header */
+        left: 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding-bottom: 10px;
+        z-index: 999; /* Below sticky header */
+    }
+
+    .main-nav.active {
+        display: flex; /* Show when active (via JS) */
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Stack menu items */
+        width: 100%;
+    }
+
+    .main-nav ul li {
+        margin: 0; /* Remove horizontal margins */
+        border-bottom: 1px solid #eee; /* Separator for menu items */
+        width: 100%;
+    }
+    .main-nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    .main-nav ul li a {
+        padding: 15px 20px; /* Wider clickable area */
+        text-align: center;
+        border-bottom: none; /* Remove hover border */
+    }
+
+    .main-nav ul li a:hover,
+    .main-nav ul li a.active {
+        background-color: #f7f7f7; /* Light background on hover/active */
+        border-bottom: none;
+    }
+
+    /* Dropdown menu within mobile nav */
+    .main-nav .dropdown-menu {
+        position: static; /* Remove absolute positioning */
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        background-color: #f0f0f0; /* Slightly darker background for dropdown */
+        transform: none;
+        opacity: 1; /* Always visible when parent is active */
+        min-width: unset;
+    }
+
+    .main-nav .dropdown-menu li a {
+        padding: 10px 30px; /* Indent dropdown items */
+        font-size: 0.95em;
+    }
+
+    .main-nav .dropdown:hover .dropdown-menu {
+        display: block; /* Ensure dropdown shows on hover (or click via JS) */
+    }
+
+    .main-nav .dropdown i.fa-chevron-down {
+        margin-left: auto; /* Push icon to right */
+        margin-right: 20px; /* Some padding */
+    }
+
+    .menu-toggle {
+        display: block; /* Show mobile menu toggle */
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 80px 15px; /* Reduce padding */
+    }
+
+    .hero-content h2 {
+        font-size: 2.2em; /* Further reduce heading size */
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .hero-buttons .btn {
+        display: block; /* Stack buttons vertically */
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Page Header */
+    .page-header {
+        padding: 50px 15px 40px;
+    }
+
+    .page-header h2 {
+        font-size: 2em;
+    }
+
+    .page-header p {
+        font-size: 1em;
+    }
+
+    /* WhatsApp Float Button */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+    }
+
+    /* General Grid Adjustments for mobile */
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr; /* Force single column layout */
+        gap: 25px; /* Adjust gap */
+        margin-top: 30px;
+    }
+
+    /* Specific Section Adjustments */
+    .expertise-card,
+    .course-card,
+    .philosophy-card,
+    .subject-card,
+    .methodology-item,
+    .video-card,
+    .testimonial-item-long,
+    .gallery-item,
+    .blog-post-card,
+    .related-post-card {
+        padding: 20px; /* Reduce padding on cards */
+    }
+
+    /* Blog Post Content */
+    .post-author-box {
+        padding: 20px;
+    }
+    .related-posts-grid {
+        grid-template-columns: 1fr; /* Stack related posts */
+    }
+
+    /* FAQ Page */
+    .faq-question {
+        padding: 15px 20px; /* Adjust padding for touch targets */
+        font-size: 1.05em;
+    }
+    .faq-answer {
+        padding: 0 20px; /* Adjust padding */
+    }
+    .faq-item.active .faq-answer {
+        padding: 15px 20px; /* Adjust padding when active */
+    }
+
+    /* Contact Page */
+    .contact-info p {
+        flex-direction: column; /* Stack icon and text for address/phone */
+        align-items: flex-start;
+        gap: 5px; /* Reduce gap */
+    }
+    .contact-info .contact-icon {
+        margin-bottom: 5px; /* Add space below icon when stacked */
+    }
+    .contact-info .social-links {
+        justify-content: center; /* Center social icons */
+    }
+    .contact-info .social-links a {
+        font-size: 1.8em; /* Smaller icons on mobile */
+    }
+    .map-container {
+        height: 250px; /* Further reduce map height */
+    }
+
+    /* 404 Page */
+    .error-code {
+        font-size: 5em;
+    }
+    .error-message {
+        font-size: 1.8em;
+    }
+    .not-found-section p.lead {
+        font-size: 1em;
+    }
+    .error-image img {
+        max-width: 300px;
+    }
+
+}
+
+
+/* ==========================================================================
+   4. Media Query for Extra Small Devices (Max-width: 480px)
+      - For very small smartphones
+   ========================================================================== */
+@media (max-width: 480px) {
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 2.0em; }
+    h3 { font-size: 1.8em; }
+    h4 { font-size: 1.5em; }
+    h5 { font-size: 1.2em; }
+    h6 { font-size: 1em; }
+
+    .hero-content h2 {
+        font-size: 1.8em;
+    }
+    .hero-content p {
+        font-size: 0.9em;
+    }
+
+    .page-header h2 {
+        font-size: 1.8em;
+    }
+    .page-header p {
+        font-size: 0.9em;
+    }
+
+    .whatsapp-float {
+        width: 45px;
+        height: 45px;
+        bottom: 15px;
+        right: 15px;
+        font-size: 22px;
+    }
+
+    .testimonial-item p::before,
+    .testimonial-item p::after {
+        font-size: 3em; /* Smaller quotes on small mobiles */
+    }
+
+    .testimonial-item-long {
+        padding: 25px; /* Further reduce padding */
+    }
+    .student-info-long img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .teacher-profile-card img {
+        width: 200px; /* Smaller image for teachers on very small screens */
+        height: 200px;
+    }
+    .teacher-profile-card {
+        padding: 30px;
+    }
+
+    .expertise-card,
+    .course-card,
+    .philosophy-card,
+    .subject-card,
+    .methodology-item,
+    .video-card,
+    .gallery-item,
+    .blog-post-card,
+    .related-post-card {
+        padding: 15px; /* Even smaller padding on cards */
+    }
+
+    .blog-image {
+        height: 180px; /* Adjust height for blog images */
+    }
+    .gallery-item img {
+        height: 160px; /* Adjust height for gallery images */
+    }
+
+    .contact-info,
+    .enquiry-form-container {
+        padding: 25px; /* Adjust padding for contact sections */
+    }
+}
+
+
+/* Carousel Controls (for buttons) */
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center buttons and carousel */
+    gap: 15px; /* Space between buttons and carousel */
+    margin-top: 30px; /* Space from heading */
+}
+
+.carousel-controls .btn-small {
+    font-size: 1.2em; /* Larger icons for nav buttons */
+    padding: 8px 12px;
+}
+
+/* Testimonial Carousel container (if it's a wrapper for slides) */
+.testimonial-carousel {
+    position: relative;
+    overflow: hidden; /* Hide slides that are not active */
+    width: 100%;
+    max-width: 700px; /* Limit carousel width */
+    margin: 0 auto; /* Center the carousel */
+    height: auto; /* Allow height to adjust */
+}
+
+.testimonial-item {
+    display: none; /* Hide all slides by default (JS will show active one) */
+    position: absolute; /* Position slides over each other */
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out; /* Fade transition */
+    padding: 30px; /* Consistent padding */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.testimonial-item.active-slide {
+    display: block; /* Show the active slide */
+    opacity: 1;
+    position: relative; /* Take up space when active */
+}
+
+/* Ensure testimonial item content is centered */
+.testimonial-item p {
+    position: relative; /* For quotes positioning */
+    font-size: 1.1em;
+    font-style: italic;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center; /* Ensure text is centered */
+}
+
+.testimonial-item p::before,
+.testimonial-item p::after {
+    content: "\201C"; /* Left double quotation mark */
+    font-size: 4em;
+    color: #dee2e6; /* Light gray for quotes */
+    position: absolute;
+    opacity: 0.5;
+    z-index: 0;
+}
+.testimonial-item p::before {
+    left: 0;
+    top: -20px;
+}
+.testimonial-item p::after {
+    content: "\201D";
+    right: 0;
+    bottom: -20px;
+}
+
+.student-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.student-info img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #007bff;
+}
+
+.student-info h4 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.1em;
+}
+
+.student-info span {
+    font-size: 0.9em;
+    color: #666;
+    display: block;
+}
+
+/* Adjust for mobile responsiveness */
+@media (max-width: 767px) {
+    .testimonial-carousel {
+        max-width: 90%; /* Wider on small screens */
+    }
+    .testimonial-item {
+        padding: 20px;
+    }
+    .testimonial-item p::before,
+    .testimonial-item p::after {
+        font-size: 3em;
+        top: -10px;
+        bottom: -10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-controls {
+        flex-direction: column; /* Stack buttons vertically below carousel */
+        gap: 10px;
+    }
+    .testimonial-carousel {
+        order: 1; /* Place carousel first */
+        margin-bottom: 20px;
+    }
+    .testimonial-item {
+        padding: 15px;
+    }
+}

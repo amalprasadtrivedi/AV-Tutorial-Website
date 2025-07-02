@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AV Tutorial - Excellence in Mathematics & Science Education by Virendra Prasad Trivedi and Vishal Verma. Coaching for Classes 9-12 & Competitive Exams (NDA, CDS, AFCAT, CSAT) in Lucknow, Uttar Pradesh, India.">
+    <meta name="keywords" content="AV Tutorial, Mathematics, Physics, Chemistry, Biology, Coaching, Lucknow, Uttar Pradesh, India, Virendra Prasad Trivedi, Vishal Verma, NDA, CDS, AFCAT, CSAT, Classes 9, 10, 11, 12, Kalindri Gyan, Trivedi Sir, Math classes">
+    <meta name="author" content="AV Tutorial Web Development Team">
+
+    <title>AV Tutorial - Excellence in Mathematics & Science Education</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="assets/img/icons/favicon.png">
+
+    <!-- Google Fonts (Example - using Roboto and Montserrat as professional educational fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome (for icons) - consider hosting locally if performance is critical for production -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- CSS Links -->
+    <!-- These files will define the visual style of your website. -->
+    <link rel="stylesheet" href="assets/css/base.css">         <!-- Basic global styles, resets, typography defaults -->
+    <link rel="stylesheet" href="assets/css/components.css">    <!-- Styles for reusable UI elements like buttons, cards -->
+    <link rel="stylesheet" href="assets/css/style.css">         <!-- Main layout, section-specific styling, color palette -->
+    <link rel="stylesheet" href="assets/css/responsive.css">    <!-- Media queries for responsiveness across devices -->
+
+</head>
+<body>
+
+    <!-- WhatsApp Chat Button (Fixed Position) -->
+    <!-- This button will float on the screen, allowing users to quickly initiate a WhatsApp chat. -->
+    <a href="https://wa.me/91708031492?text=Hello%20AV%20Tutorial%2C%20I%27m%20interested%20in%20your%20coaching%20programs." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header Section -->
+    <!-- Contains the logo, main navigation, and a mobile menu toggle. -->
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <!-- Replace 'assets/img/logo.png' with your actual logo image path -->
+                    <img src="assets/img/logo.png" alt="AV Tutorial Logo">
+                    <!-- <h1>AV Tutorial</h1> -->
+                </a>
+            </div>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="teachers.html">Teachers</a></li>
+                    <li class="dropdown">
+                        <a href="courses.html">Courses <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="classes/class9.html">Class 9</a></li>
+                            <li><a href="classes/class10.html">Class 10</a></li>
+                            <li><a href="classes/class11.html">Class 11</a></li>
+                            <li><a href="classes/class12.html">Class 12</a></li>
+                            <li><a href="competitive-exams/nda.html">NDA</a></li>
+                            <li><a href="competitive-exams/cds.html">CDS</a></li>
+                            <li><a href="competitive-exams/afcat.html">AFCAT</a></li>
+                            <li><a href="competitive-exams/csat.html">CSAT</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="videos.html">Video Lectures</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog/index.html">Blog</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html" class="btn btn-primary btn-big">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile menu toggle button (will be controlled by JavaScript) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <!-- The prominent top section with a catchy headline, description, and call-to-action buttons. -->
+    <section class="hero-section">
+        <div class="container hero-content">
+            <h2>Unlock Your Potential with AV Tutorial</h2>
+            <p>Comprehensive coaching for Mathematics, Physics, Chemistry, and Biology from Class 9 to 12, plus specialized preparation for competitive exams like NDA, CDS, AFCAT, and CSAT.</p>
+            <div class="hero-buttons">
+                <a href="courses.html" class="btn btn-primary btn-large">Explore Courses</a>
+                <a href="videos.html" class="btn btn-secondary btn-large">Watch Free Tutorials</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us - Brief Section -->
+    <!-- A concise introduction to the coaching center and its founders. -->
+    <section class="about-brief section-padding bg-light">
+        <div class="container text-center">
+            <h3>About AV Tutorial</h3>
+            <p class="lead">
+                Led by the highly experienced <b>Virendra Prasad Trivedi Sir</b> (Mathematics & Physics, teaching since 1992) and <b>Vishal Verma Sir</b> (Chemistry & Biology, teaching since 2005), AV Tutorial is a premier coaching center in Lucknow dedicated to fostering academic excellence and holistic development. We believe in building strong fundamentals and instilling confidence in every student.
+            </p>
+            <a href="about.html" class="btn btn-outline-primary">Learn More About Us</a>
+        </div>
+    </section>
+
+    <!-- Our Expertise / Services Section -->
+    <!-- Highlights the main subjects and areas of coaching offered. -->
+    <section class="expertise-section section-padding">
+        <div class="container">
+            <h3 class="text-center">Our Core Offerings</h3>
+            <div class="grid-3">
+                <div class="expertise-card">
+                    <i class="fas fa-calculator expertise-icon"></i>
+                    <h4>Mathematics Excellence</h4>
+                    <p>Master complex concepts from Class 9 to 12 and excel in competitive exams with Trivedi Sir's expert guidance.</p>
+                    <a href="classes/class12.html" class="card-link">View Math Courses <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="expertise-card">
+                    <i class="fas fa-flask expertise-icon"></i>
+                    <h4>Science Fundamentals</h4>
+                    <p>Comprehensive coaching in Physics (by Trivedi Sir), Chemistry & Biology (by Vishal Verma Sir) for school and competitive levels.</p>
+                    <a href="classes/class11.html" class="card-link">View Science Courses <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="expertise-card">
+                    <i class="fas fa-graduation-cap expertise-icon"></i>
+                    <h4>Competitive Exam Prep</h4>
+                    <p>Specialized coaching for NDA, CDS, AFCAT, CSAT, and other entrance exams, ensuring you're fully prepared.</p>
+                    <a href="competitive-exams/nda.html" class="card-link">View Competitive Programs <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Teachers Section -->
+    <!-- Showcases brief profiles of the two main teachers. -->
+    <section class="featured-teachers section-padding bg-light">
+        <div class="container text-center">
+            <h3>Meet Our Expert Educators</h3>
+            <div class="grid-2 teacher-grid">
+                <div class="teacher-card">
+                    <!-- Replace 'assets/img/virendra-prasad-trivedi.jpg' with actual image path -->
+                    <img src="assets/img/virendra-prasad-trivedi.avif" alt="Virendra Prasad Trivedi Sir">
+                    <h4>Virendra Prasad Trivedi Sir</h4>
+                    <p class="subject">Mathematics & Physics</p>
+                    <p class="experience">Teaching since 1992</p>
+                    <a href="teachers.html#trivedi-sir" class="btn btn-outline-primary btn-small">View Profile</a>
+                </div>
+                <div class="teacher-card">
+                    <!-- Replace 'assets/img/vishal-verma.jpg' with actual image path -->
+                    <img src="assets/img/vishal-verma.avif" alt="Vishal Verma Sir">
+                    <h4>Vishal Verma Sir</h4>
+                    <p class="subject">Chemistry & Biology</p>
+                    <p class="experience">Teaching since 2005</p>
+                    <a href="teachers.html#verma-sir" class="btn btn-outline-primary btn-small">View Profile</a>
+                </div>
+            </div>
+            <p style="margin-top: 30px;">
+                Our dedicated faculty ensures personalized attention and a deep understanding of concepts.
+            </p>
+            <br>
+            <p>With years of experience and a passion for teaching, our educators are committed to  helping students excel academically and develop a love for learning.</p>
+            <br>
+            <a href="teachers.html" class="btn btn-primary">See All Teachers</a>
+        </div>
+    </section>
+
+    <!-- YouTube Integration Section -->
+    <!-- Section to showcase embedded videos from "Kalindri Gyan" YouTube channel. -->
+    <section class="youtube-section section-padding">
+        <div class="container text-center">
+            <h3>Learn from "Kalindri Gyan" - Mathematics By Trivedi Sir</h3>
+            <p class="lead">Dive into free video lectures and conceptual explanations directly from Trivedi Sir's popular YouTube channel.</p>
+            <div class="grid-2 youtube-videos">
+                <!-- Example YouTube Embed 1 - Replace VIDEO_ID_1 with an actual YouTube video ID -->
+                <div class="video-wrapper">
+        		<div class="youtube-player" data-video-id="ICENhsUwJ8s"></div>
+    				<p class="video-title">Understanding Algebra Basics</p>
+		        </div>
+                <!-- Example YouTube Embed 2 - Replace VIDEO_ID_2 with an actual YouTube video ID -->
+                <div class="video-wrapper">
+    			<div class="youtube-player" data-video-id="CIW5I9-vIos"></div>
+    				<p class="video-title">Understanding Algebra Basics</p>
+			</div>
+            	</div>
+            	<div class="youtube-cta">
+                <a href="https://www.youtube.com/@KalindriGyan" target="_blank" class="btn btn-youtube">
+                    <i class="fab fa-youtube"></i> Visit Kalindri Gyan Channel
+                </a>
+                <a href="videos.html" class="btn btn-outline-secondary">
+                    View All Video Lectures
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <!-- Displays quotes from satisfied students. Will ideally be a carousel using JavaScript. -->
+    <section class="testimonials-section section-padding bg-light">
+    	<div class="container text-center">
+        	<h3>What Our Students Say</h3>
+        		<div class="carousel-controls">
+            			<button id="testimonialPrev" class="btn btn-outline-primary btn-small"><i class="fas fa-chevron-left"></i></button>
+           				<div class="testimonial-carousel" id="testimonialCarousel">
+                			<!-- Testimonial 1 -->
+                				<div class="testimonial-item">
+                    					<p>"AV Tutorial provided the best guidance and constant motivation during my Class 12 preparation. The doubt sessions were extremely helpful."</p>
+                   					<div class="student-info">
+                        				<img src="assets/img/students/student.jpg" alt="Student Name 1">
+                        				<h4>Aman Singh</h4>
+                        				<span>Ex-Student, Class 12 (Batch 2024)</span>
+                    				</div>
+                			    </div>   
+                			<!-- Testimonial 2 -->
+                				<div class="testimonial-item">
+                   					 <p>"Vishal Sir’s chemistry classes were not only informative but also super engaging. I finally started enjoying the subject!"</p>
+                   					 <div class="student-info">
+                        				<img src="assets/img/students/student.jpg" alt="Student Name 2">
+                        				<h4>Priya Sharma</h4>
+                        				<span>Ex-Student, Class 11 (Batch 2024)</span>
+                    			     </div>
+                			    </div>
+                            <!-- Testimonial 3 -->
+                				<div class="testimonial-item">
+                    					<p>"The personalized attention at AV Tutorial helped me clear all my basic concepts. My confidence in Maths and Science grew so much."</p>
+                   					<div class="student-info">
+                        				<img src="assets/img/students/student.jpg" alt="Student Name 1">
+                        				<h4>Rohit Mehta</h4>
+                        				<span>Ex-Student, Class 10 (Batch 2024)</span>
+                    				</div>
+                			    </div>
+                            <!-- Testimonial 4 -->
+                				<div class="testimonial-item">
+                    					<p>"Even in Class 9, AV Tutorial's structured approach made it easier to stay ahead of school curriculum. Tests and feedback kept me on track."</p>
+                   					<div class="student-info">
+                        				<img src="assets/img/students/student.jpg" alt="Student Name 1">
+                        				<h4>Kabir Taneja</h4>
+                        				<span>Ex-Student, Class 9 (Batch 2023)</span>
+                    				</div>
+                			    </div>
+                            <!-- Testimonial 5 -->
+                				<div class="testimonial-item">
+                    					<p>"I loved the way teachers explained topics using visuals and real-life examples. It made learning in Class 8 so much more fun!"</p>
+                   					<div class="student-info">
+                        				<img src="assets/img/students/student.jpg" alt="Student Name 1">
+                        				<h4>Sneha Verma</h4>
+                        				<span>Ex-Student, Class 8 (Batch 2024)</span>
+                    				</div>
+                			    </div>
+                		<!-- Add more testimonials as needed, potentially using JavaScript for a carousel -->
+            		</div>
+            	<button id="testimonialNext" class="btn btn-outline-primary btn-small"><i class="fas fa-chevron-right"></i></button>
+        	</div>
+        	<a href="testimonials.html" class="btn btn-primary mt-30">Read More Success Stories</a>
+     		</div>
+    	</section>
+
+    <!-- Call to Action - Enroll Now -->
+    <!-- A concluding section encouraging visitors to take action. -->
+    <section class="cta-section section-padding text-center">
+        <div class="container">
+            <h2>Ready to Achieve Academic Excellence?</h2>
+            <p>Join AV Tutorial and embark on a journey of profound learning and success.</p>
+            <a href="contact.html" class="btn btn-secondary btn-large">Enroll Now / Ask A Question</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <!-- Contains copyright information, quick links, contact details, and social media links. -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-col about-col">
+                <div class="logo">
+                    <!-- Replace 'assets/img/logo.png' with your actual logo image path -->
+                    <!-- <img src="assets/img/logo.png" alt="AV Tutorial Logo"> -->
+                    <h3>AV Tutorial</h3>
+                </div>
+                <p>Your trusted partner in mastering Mathematics, Physics, Chemistry & Biology for school and competitive exams.</p>
+                <p>Located in Lucknow, Uttar Pradesh, India.</p>
+            </div>
+            <div class="footer-col links-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Our Courses</a></li>
+                    <li><a href="teachers.html">Our Teachers</a></li>
+                    <li><a href="videos.html">Video Lectures</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-info-col">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> SS-III, Sector D1, LDA Colony Kanpur Road, Lucknow, UP 226012</p>
+                <p><i class="fas fa-phone"></i> +91 7080315492</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:amaltrivedi3904stella@gmail.com">info@avtutorial.com</a></p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/917080315492" target="_blank">Chat on WhatsApp</a></p>
+            </div>
+            <div class="footer-col social-col">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/@KalindriGyan" target="_blank" aria-label="YouTube Channel"><i class="fab fa-youtube"></i></a>
+                    <!-- Add other social media links as needed. Replace '#' with actual links. -->
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:amaltrivedi3904stella@gmail.com" aria-label="Email Us"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 AV Tutorial. All rights reserved. Designed and Developed by Amal Prasad Trivedi for Excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Links -->
+    <!-- The main JavaScript file for general interactivity, like the navigation toggle. -->
+    <script src="assets/js/script.js"></script>
+    <!-- Include other specific JS files as needed, e.g., for carousels or form validation. -->
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/youtube-embed.js"></script>
+    <script src="assets/js/form-validation.js"></script>
+
+</body>
+</html>

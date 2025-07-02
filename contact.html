@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact AV Tutorial for admissions, course inquiries, or any questions. Fill out our enquiry form or find our location and contact details.">
+    <meta name="keywords" content="AV Tutorial, Contact Us, Enquiry Form, Admission Inquiry, Lucknow Coaching, Phone Number, Email, Address, Get in Touch">
+    <meta name="author" content="AV Tutorial Web Development Team">
+
+    <title>Contact Us - AV Tutorial</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/icons/favicon.png" type="image/png">
+
+    <!-- Google Fonts (Consistency with other pages) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome (Consistency with other pages) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- CSS Links (Consistency with other pages) -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+<body>
+
+    <!-- WhatsApp Chat Button (Fixed Position - Consistency with other pages) -->
+    <a href="https://wa.me/917080315492?text=Hello%20AV%20Tutorial%2C%20I%27m%20interested%20in%20your%20programs." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header Section (Consistency with other pages) -->
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/logo.png" alt="AV Tutorial Logo">
+                    <!-- <h1>AV Tutorial</h1> -->
+                </a>
+            </div>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="teachers.html">Teachers</a></li>
+                    <li class="dropdown">
+                        <a href="courses.html">Courses <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="classes/class9.html">Class 9</a></li>
+                            <li><a href="classes/class10.html">Class 10</a></li>
+                            <li><a href="classes/class11.html">Class 11</a></li>
+                            <li><a href="classes/class12.html">Class 12</a></li>
+                            <li><a href="competitive-exams/nda.html">NDA</a></li>
+                            <li><a href="competitive-exams/cds.html">CDS</a></li>
+                            <li><a href="competitive-exams/afcat.html">AFCAT</a></li>
+                            <li><a href="competitive-exams/csat.html">CSAT</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="videos.html">Video Lectures</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog/index.html">Blog</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html" class="active btn btn-primary btn-small">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header / Breadcrumb Section -->
+    <section class="page-header bg-dark">
+        <div class="container text-center">
+            <h2>Contact Us</h2>
+            <p>We're here to help you achieve your academic goals.</p>
+        </div>
+    </section>
+
+    <!-- Contact Information and Form Section -->
+    <section class="contact-section section-padding">
+        <div class="container">
+            <h3 class="text-center">Get in Touch with AV Tutorial</h3>
+            <p class="lead text-center max-w-800 mx-auto">
+                Whether you have questions about our courses, admissions, or would like to schedule a consultation, our team is ready to assist you. Reach out to us through the form below or connect via phone, email, or WhatsApp.
+            </p>
+
+            <div class="grid-2 contact-content">
+                <div class="contact-info bg-light rounded-corners">
+                    <h4>Our Contact Details</h4>
+                    <p><i class="fas fa-map-marker-alt contact-icon"></i> <strong>Address:</strong> SS-III, Sector D1, LDA Colony Kanpur Road, Lucknow, UP 226012</p>
+                    <p><i class="fas fa-phone contact-icon"></i> <strong>Phone:</strong> <a href="tel:+917080315492">+91 7080315492</a></p>
+                    <p><i class="fas fa-envelope contact-icon"></i> <strong>Email:</strong> <a href="mailto:amaltrivedi3904stella@gmail.com">info@avtutorial.com</a></p>
+                    <p><i class="fab fa-whatsapp contact-icon"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/917080315492" target="_blank">Chat with us!</a></p>
+                    <p><i class="fas fa-clock contact-icon"></i> <strong>Operating Hours:</strong> 4:00 PM - 9:00 PM, Monday - Saturday</p>
+
+                    <h4 class="mt-40">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/@KalindriGyan" target="_blank" aria-label="YouTube Channel"><i class="fab fa-youtube fa-2x"></i></a>
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                    </div>
+                </div>
+
+                <div class="enquiry-form-container">
+                    <h4>Send Us an Enquiry</h4>
+                    <!-- Removed action attribute from form as JS will handle fetch to API -->
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email:</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Your Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="e.g., +91 9876543210">
+                            <div class="error-message" id="phoneError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Interested Course (Optional):</label>
+                            <select id="course" name="course">
+                                <option value="">Select a Course</option>
+                                <option value="Class 9">Class 9</option>
+                                <option value="Class 10">Class 10</option>
+                                <option value="Class 11">Class 11</option>
+                                <option value="Class 12">Class 12</option>
+                                <option value="NDA">NDA</option>
+                                <option value="CDS">CDS</option>
+                                <option value="AFCAT">AFCAT</option>
+                                <option value="CSAT">CSAT</option>
+                                <option value="Other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message:</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+                            <div class="error-message" id="messageError"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                        <div id="formMessage" class="form-submission-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Map Section -->
+    <section class="map-section section-padding-small">
+        <div class="container text-center">
+            <h3>Find Us on the Map</h3>
+            <p>Visit our coaching center in Lucknow.</p>
+            <div class="map-container rounded-corners">
+                <!-- Replace 'YOUR_GOOGLE_MAPS_EMBED_URL' with the actual embed URL from Google Maps -->
+                <!-- Go to Google Maps, search for your location, click 'Share', then 'Embed a map', and copy the src from the iframe. -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2995.098639067918!2d80.90618013577905!3d26.782879937505104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1751451778089!5m2!1sen!2sin"
+                    width="100%"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="AV Tutorial Location on Google Maps">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section (Consistency with other pages) -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-col about-col">
+                <div class="logo">
+                    <!-- <img src="assets/img/logo.png" alt="AV Tutorial Logo"> -->
+                    <h3>AV Tutorial</h3>
+                </div>
+                <p>Your trusted partner in mastering Mathematics, Physics, Chemistry & Biology for school and competitive exams.</p>
+                <p>Located in Lucknow, Uttar Pradesh, India.</p>
+            </div>
+            <div class="footer-col links-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Our Courses</a></li>
+                    <li><a href="teachers.html">Our Teachers</a></li>
+                    <li><a href="videos.html">Video Lectures</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-info-col">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> SS-III, Sector D1, LDA Colony, Kanpur Road, Lucknow, UP 226012</p>
+                <p><i class="fas fa-phone"></i> +91 7080315492</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:amaltrivedi3904stella@gmail.com">info@avtutorial.com</a></p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/917080315492" target="_blank">Chat on WhatsApp</a></p>
+            </div>
+            <div class="footer-col social-col">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/@KalindriGyan" target="_blank" aria-label="YouTube Channel"><i class="fab fa-youtube"></i></a>
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:amaltrivedi3904stella@gmail.com" aria-label="Email Us"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 AV Tutorial. All rights reserved. Designed and Developed by Amal Prasad Trivedi for Excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Links -->
+    <script src="assets/js/script.js"></script>
+    <!-- Dedicated JavaScript for form validation AND submission handling -->
+    <script src="assets/js/form-validation.js"></script>
+
+</body>
+</html>

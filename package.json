@@ -1,0 +1,12 @@
+{
+  "name": "av-tutorial-website",
+  "version": "1.0.0",
+  "description": "AV Tutorial Website with contact form backend",
+  "main": "api/contact.js",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}

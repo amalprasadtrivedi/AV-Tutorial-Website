@@ -1,0 +1,253 @@
+/*
+    components.css - Styles for Reusable UI Components
+
+    This file contains CSS rules for various common and reusable
+    UI components across the AV Tutorial website, such as buttons,
+    form elements, and various card styles.
+
+    These styles are designed to be consistent and easily applied
+    wherever these components are used.
+*/
+
+/* ==========================================================================
+   1. Buttons
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px; /* Rounded corners for buttons */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-width: 2px;
+    border-style: solid;
+    white-space: nowrap; /* Prevent text wrapping on buttons */
+}
+
+/* Primary Button Style */
+.btn-primary {
+    background-color: #007bff; /* Primary blue */
+    color: #fff;
+    border-color: #007bff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Secondary Button Style */
+.btn-secondary {
+    background-color: #28a745; /* Success green */
+    color: #fff;
+    border-color: #28a745;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+}
+
+.btn-secondary:hover {
+    background-color: #218838; /* Darker green on hover */
+    border-color: #218838;
+    box-shadow: 0 6px 15px rgba(40, 167, 69, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Outline Primary Button Style */
+.btn-outline-primary {
+    background-color: transparent;
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Outline Secondary Button Style */
+.btn-outline-secondary {
+    background-color: transparent;
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #28a745;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Small Button (used in header/navigation) */
+.btn-small {
+    padding: 10px 20px;
+    font-size: 0.9em;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+/* Large Button (used in hero/CTA) */
+.btn-large {
+    padding: 18px 35px;
+    font-size: 1.1em;
+}
+
+/* Button for YouTube integration */
+.btn-youtube {
+    background-color: #FF0000;
+    color: #fff;
+    border-color: #FF0000;
+}
+
+.btn-youtube:hover {
+    background-color: #cc0000;
+    border-color: #cc0000;
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-youtube i {
+    margin-right: 8px; /* Space for icon */
+}
+
+/* Disabled Button Style */
+.btn.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none; /* Disables click events */
+    transform: none; /* No hover effect */
+    box-shadow: none;
+}
+
+
+/* ==========================================================================
+   2. Form Elements (Basic Styles for consistency)
+   ========================================================================== */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da; /* Light gray border */
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: #495057;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff; /* Primary color on focus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Subtle blue glow */
+    outline: none; /* Remove default outline */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing by user */
+    min-height: 100px;
+}
+
+/* Error states for form fields (controlled by JavaScript) */
+input.error,
+textarea.error {
+    border-color: #dc3545; /* Red border for errors */
+}
+
+
+/* ==========================================================================
+   3. Card Styles (General purpose, specific cards like expertise-card will add on top)
+   ========================================================================== */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden; /* Ensures content respects border-radius */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* More prominent shadow on hover */
+}
+
+/* Example of a basic card content structure */
+.card-body {
+    padding: 25px;
+}
+
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Image within a card (e.g., for blog/gallery cards) */
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Example fixed height */
+    object-fit: cover; /* Cover the area */
+    display: block;
+}
+
+/* ==========================================================================
+   4. Utility Classes (Commonly used visual adjustments)
+   ========================================================================== */
+.rounded-corners {
+    border-radius: 10px; /* Applied to many elements like sections and cards */
+    overflow: hidden; /* Ensures content respects border-radius */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+/* Margin Utilities (already in style.css, but good to reiterate component-level) */
+.mb-10 { margin-bottom: 10px; }
+.mb-15 { margin-bottom: 15px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
+
+.mt-10 { margin-top: 10px; }
+.mt-15 { margin-top: 15px; }
+.mt-20 { margin-top: 20px; }
+.mt-30 { margin-top: 30px; }
+.mt-40 { margin-top: 40px; }
+.mt-50 { margin-top: 50px; }
+
+/* Flex utilities if needed for more complex components */
+.d-flex { display: flex; }
+.align-items-center { align-items: center; }
+.justify-content-center { justify-content: center; }
+.flex-column { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
