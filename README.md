@@ -87,8 +87,8 @@ To make the contact form functional (i.e., send emails), you'll deploy the site 
 
 ## 📂 Project Structure
 
+```
 
-.
 ├── api/
 │   └── contact.js              # Vercel Serverless Function for contact form
 ├── assets/
@@ -136,6 +136,7 @@ To make the contact form functional (i.e., send emails), you'll deploy the site 
 ├── testimonials.html           # Testimonials/Success Stories page
 └── videos.html                 # Dedicated page for YouTube channel integration
 
+```
 
 ## 🤝 Contributing
 
