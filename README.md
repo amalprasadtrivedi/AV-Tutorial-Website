@@ -148,7 +148,7 @@ For any inquiries or support, please reach out to us:
 
 * **Email:** `amaltrivedi3904stella@gmail.com` 
 * **WhatsApp:** `+91 7080315492`
-* **Website:** [Your Vercel Deployment URL Here]
+* **Website:** `https://av-tutorial.vercel.app`
 
 ## 📜 License
 
